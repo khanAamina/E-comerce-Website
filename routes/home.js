@@ -9,13 +9,15 @@ const router= express.Router();
 
 
 router.get('/',(req,res,next)=>{
-    console.log('User:', req.user)
+    
     res.render('home',{PageTitle:'E-Commerce'})
     
 })
 router.get('/homepage',authMiddleware ,(req,res,next)=>{
     console.log('User:', req.user)
-    return res.send(`welcome ${req.user.Name}`)
+    const user =  req.user.Name ;
+    console.log(user)
+    res.render('dashboard',{PageTitle:'E-Commerce:Homepage' , Name : user})
     
 })
 router.get('/products',(req,res,next)=>{
