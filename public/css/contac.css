@@ -1,0 +1,77 @@
+.page-title-area {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding-top: 285px;
+    padding-bottom: 150px;
+    background-image: url(../photos/page-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ptb-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.contact-area .quick-contact {
+    background-color: #ffffff;;
+    box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
+    padding: 30px;
+}
+.contact-area .quick-contact h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: -4px;
+}
+.contact-area .quick-contact ul li {
+    font-size: 18px;
+    position: relative;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 15px;
+    background-color: #014232;
+    padding: 19px 20px;
+    padding-left: 65px;
+}
+.contact-area .contact-wrap {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
+    box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
+    padding: 40px;
+    text-align: center;
+}
+.contact-area .section-title {
+    margin-bottom: 30px;
+}
+.wpcf7 .screen-reader-response {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.contact-area .quick-contact ul li span {
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+}
+.contact-area .quick-contact ul li a {
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+    color: #ffffff;
+}

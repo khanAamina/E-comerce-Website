@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('layouts/head',); %>
+    <link rel="stylesheet" href="/css/register.css">
+  </head>
+<body>
+    <%- include('layouts/nav',); %>
+    <div class="container Register-form mt-5" style="width: 30%;">
+      <% if (message.type) { %>
+        <div class="alert alert-<%= message.type === 'success' ? 'success' : 'danger' %>" role="alert">
+          <%= message.body %>
+        </div>
+      <% } %>
+      <h3 class="formheading" style="text-align: center">Login</h3>
+      <form method='POST' action='/signIn'>
+          <div class="email">
+              <label for="Email"> Email </label>
+              <input  value="<%= FormData.email %>" type="tel"  class="form-control <%= errors.email ?'is-invalid':'' %>" id="email"  placeholder="example@gmail.com" name="email"  required >     
+              <% if (errors.email) { %>
+              <div class="invalid-feedback">
+               <%= errors.email[0] %>
+              </div> 
+              <% } %> 
+            </div>  
+          <div class="passward">
+            <label for="inputPassword" class="col-form-label">Password</label>
+            <input type="password"  class="form-control <%= errors.password ?'is-invalid':'' %>" id="inputPassword" name="password" placeholder="Enter your Password" required>
+            <% if (errors.password) { %>
+              <div class="invalid-feedback">
+               <%= errors.password[0] %>
+              </div> 
+              <% } %>
+          </div>
+          <div class="loginsection">
+            <button class="btn btn-outline-success my-2 my-sm-0 "type="Submit">SignIn</button>
+          </div>
+      </form>
+      <div class="createbtn">
+        <h6 class="text">If You don't have you Account? Create a new Account. </h6>
+        <a href="/register" > <button class="btn btn-outline-success my-2 my-sm-0 "  type="register"> Create a Account</button></a>
+      </div>
+  </div>
+  <footer class="site-footer" >
+    <%- include('layouts/footer',); %>  
+</footer>
+</body>
+</html>

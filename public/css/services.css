@@ -1,0 +1,69 @@
+@import url(“https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css”);
+.page-title-area {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding-top: 285px;
+    padding-bottom: 150px;
+    background-image: url(../photos/page-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.pb-70 {
+    padding-bottom: 70px;
+    padding-top: 32px;
+}
+.section-title {
+    max-width: 660px;
+    margin: -8px auto 60px;
+    text-align: center;
+    position: relative;
+}
+.section-title span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #00906C;
+    display: block;
+    margin-bottom: 15px;
+}
+.section-title h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    text-transform: capitalize;
+    color: #25245e;
+}
+.repair-area-three .single-repair {
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    padding: 30px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px dotted #00906C;
+}
+.repair-area-three .single-repair .icon {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #00906C;
+    border-radius: 50% 50% 50% 50%;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin: 0 auto 30px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.repair-area-three .single-repair h3 {
+    margin-bottom: 15px;
+    margin-top: -4px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}

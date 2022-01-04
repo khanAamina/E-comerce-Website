@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('layouts/head',); %>
+    <link rel="stylesheet" href="/css/register.css">
+  </head>
+<body>
+    <%- include('layouts/nav',); %>
+    <div class="container Register-form mt-5" style="width: 30%;">
+      <% if (message.type) { %>
+        <div class="alert alert-<%= message.type === 'success' ? 'success' : 'danger' %>" role="alert">
+          <%= message.body %>
+        </div>
+      <% } %>
+      <h3 class="formheading" style="text-align: center">Create A new Account </h3>
+      <form method='POST' action='/register'>
+          <div class="Names" >
+              <label for="Name">Name </label>
+              <input 
+                value="<%= FormData.Name %>"
+                type="text" 
+                class="form-control  <%= errors.Name ?'is-invalid':'' %> "
+                id="first_Name" 
+                placeholder="Enter your name "
+                name="Name"
+                maxlength="64"
+                minlength="2"
+                required
+              >
+              <% if (errors.Name) { %>
+                <div class="invalid-feedback">
+                 <%= errors.Name[0] %>
+                </div> 
+                <% } %>
+            </div>
+          <div class=" phone-container">
+              <label for="Ph_no"> Phone No </label>
+              <div class="row"> 
+                <div class="country_code">           
+                  <span class="county_code">
+                      <select class="custom-select" id="Selct_countrycode" name="country_code"> +91
+                          <option>+91</option>
+                          <option>+46</option>
+                          <option>+41</option>
+                          <option>+79</option>
+                          <option>+355</option>
+                      </select>
+                  </span> 
+                </div>
+                <div class="col-sm">
+                  <input  value="<%= FormData.Mobile_No %>" type="tel"  class="form-control <%= errors.Mobile_No ?'is-invalid':'' %>" id="Ph_No"  placeholder="Phone No" name="Mobile_No" minlength="10" required>
+                  <% if (errors.Mobile_No) { %>
+                    <div class="invalid-feedback">
+                     <%= errors.Mobile_No[0] %>
+                    </div> 
+                    <% } %> 
+                </div>
+              </div>
+            </div>
+          <div class="email">
+              <label for="Email"> Email </label>
+              <input  value="<%= FormData.email %>" type="tel"  class="form-control <%= errors.email ?'is-invalid':'' %>" id="Email"  placeholder="examle@gmail.com" name="email"  maxlength="128" required >     
+              <% if (errors.email) { %>
+              <div class="invalid-feedback">
+               <%= errors.email[0] %>
+              </div> 
+              <% } %>  
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>  
+          <div class="passward">
+            <label for="inputPassword" class="col-form-label">Password</label>
+            <input type="password"  class="form-control <%= errors.password ?'is-invalid':'' %>" id="inputPassword" name="password" placeholder="Create Password" required>
+            <% if (errors.password) { %>
+              <div class="invalid-feedback">
+               <%= errors.password[0] %>
+              </div> 
+              <% } %>
+          </div>
+          <div class="form-group">
+            <label for="repeat_password"> Re-enter Password</label>
+            <input type="password" name="repeat_password" class="form-control" id="repeat_password" required>
+          </div>
+          <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1"> I accept all the agrrements  and privicy policies </label>
+          </div>
+          <div class="createbtn">
+            <button class="btn btn-outline-success my-2 my-sm-0 "  type="submit"> Create a Account</button>
+          </div>  
+      </form>
+      <div class="loginsection">
+        <h6 class="text">If You already have you Account?</h6>
+        <a href="/login"> <button class="btn btn-outline-success my-2 my-sm-0 "type="login">Login</button></a>
+      </div>
+  </div>
+  <!-- footer starts here -->
+  <footer class="site-footer" >
+    <%- include('layouts/footer',); %>  
+</footer>
+</body>
+</html>

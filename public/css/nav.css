@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Playfair+Display&display=swap');
+header{
+    width: 100%;
+    height: auto;
+}
+nav.navbar.fixed-top.navbar-expand-lg-sm-md-xl {
+    box-shadow: 0 3px 2px 0 #1e7e3436, 0 1px 2px 0 rgb(6 149 112 / 12%);
+    background-color: #000000;
+}
+.navbar-brand{
+    width: 127px;
+    margin-left: 7rem;
+}
+.logo-img{
+    max-width: 100%;
+    height: auto;
+}
+ul.navbar-nav.mr-auto {
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: 20%;
+}
+a.nav-item.nav-link {
+    margin-right: 10px;
+    font-size: large;
+    color: #fdfdfd;
+    margin-top: 8px;
+    font-family: 'Lora','Segoe UI', Tahoma, Verdana, sans-serif ;
+}
+.loginbuttons {
+    margin-right: 3rem;
+}
+button.btn.btn-outline-success.my-2.my-sm-0 {
+    border: #12375e;
+    background-color: #12375e;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+button.btn.btn-outline-success.my-2.my-sm-0:hover{
+    box-shadow: none;
+    background-color: #28507a;
+
+}
+li.nav-item.active {
+    margin-left: 10px;
+}

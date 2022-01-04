@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('layouts/head',); %>
+    <link rel="stylesheet" href="/css/contac.css">    
+</head>
+<body>
+    <!--nNav-bar Starting here-->
+    <%- include('layouts/nav',); %>
+   <!-- starts banner -->
+ <div class="page-title-area bg-2">
+    <div class="container">
+      <div class="page-title-content">
+        <h2>Contact Us</h2>
+      </div>
+    </div>
+</div>
+<!--End of banner-->
+<!--Contact Section-->
+<section class="contact-area ptb-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="quick-contact">
+            <h3>Quick Contact </h3>
+            <ul>
+              <li>
+                <i class="flaticon-maps-and-flags"></i>
+                Location:
+                <span>12/A 15th floor, Bengal Eco Intelligent Park, EM <br>                   Block, Sector V, Bidhannagar Kolkata, West Bengal, India 700091.</span>
+              </li>
+
+              <li>
+                <i class="flaticon-call"></i>
+                Call Us:
+                <a href="tel:+91 9955754701">+91 9955754701 </a>
+                 <a href="tel:+91 8961409798">+91 8961409798</a>
+              </li>
+
+              <li>
+                <i class="flaticon-envelope"></i>
+                Email Us:
+                <a href="mailto:info@proxontechnologies.com">
+                 info@proxontechnologies.com                  </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="contact-wrap">
+            <div class="contact-form">
+              <div class="section-title">
+                <h2>Let's Talk!</h2>
+              </div>
+             <div role="form" class="wpcf7" id="wpcf7-f65-o1" lang="en-US" dir="ltr">
+            <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+            <form action="/contact" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+            <div style="display: none;">
+            <input type="hidden" name="_wpcf7" value="65">
+            <input type="hidden" name="_wpcf7_version" value="5.4.2">
+            <input type="hidden" name="_wpcf7_locale" value="en_US">
+            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f65-o1">
+            <input type="hidden" name="_wpcf7_container_post" value="0">
+            <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+            </div>
+        <div id="contactForm">
+                <div class="row">
+                  <div class="col-lg-6 col-sm-6">
+                    <div class="form-group">
+                      <input type="text" name="name" id="name" class="form-control" required="" data-error="Please enter your name" placeholder="Your Name">
+                    
+                    </div>
+                  </div>
+    
+                  <div class="col-lg-6 col-sm-6">
+                    <div class="form-group">
+                         <span class="wpcf7-form-control-wrap email "><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Your Email"></span>
+                    </div>
+                  </div>
+    
+                  <div class="col-lg-6 col-sm-6">
+                    <div class="form-group">
+                      <input type="text" name="phone_number" id="phone_number" required="" data-error="Please enter your number" class="form-control" placeholder="Your Phone">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+    
+                  <div class="col-lg-6 col-sm-6">
+                    <div class="form-group">
+                      <input type="text" name="msg_subject" id="msg_subject" class="form-control" required="" data-error="Please enter your subject" placeholder="Your Subject">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+    
+                  <div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                      <textarea name="message" class="form-control" id="message" cols="30" rows="5" required="" data-error="Write your message" placeholder="Your Message"></textarea>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+    
+                  <div class="col-lg-12 col-md-12">
+                    <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Send Message</button>
+                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div><div class="wpcf7-response-output" aria-hidden="true"></div></form></div>              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--end of contact Section-->
+    <footer class="site-footer" >
+        <%- include('layouts/footer',); %>  
+    </footer>
+</body>
+</html>

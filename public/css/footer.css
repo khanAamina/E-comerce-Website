@@ -1,0 +1,31 @@
+.site-footer
+{
+    opacity: 0.9;
+    margin-top: 31px;
+    border-top: solid #072e17;
+    font-size:15px;
+    line-height:24px;
+    background-color: black;
+    color: white;
+
+}
+/* .row.w-100 {
+    margin-left: 10px;
+} */
+ul.serviceslinks {
+    list-style: none;
+}
+.col {
+    list-style: none;
+}
+.footer-container{
+    background-color: #1e5635;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Lora','Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: 300;
+}
+.copy-right {
+    padding-top: 17px;
+}
