@@ -38,6 +38,12 @@ app.use(session({
 app.use(logger('dev'))   
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use((req, res, next) => {
+    res.locals.user = req.isAuthenticated() ? req.user : '';
+    return next()
+  })
+
 app.locals.message = {}
 app.locals.FormData = {}
 app.locals.errors = {}

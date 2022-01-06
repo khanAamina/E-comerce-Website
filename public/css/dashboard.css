@@ -1,0 +1,25 @@
+.Product_form-Wrrapper {
+    width: 80vh;
+    height: 491px;
+    margin-left: 47px;
+}
+
+.Product_form-Wrrapper {
+    border: solid 2px #003d2d;
+    padding-left: 24px;
+    padding-right: 20px;
+    padding-top: 28px;
+    font-family: 'Lora','Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 18px;
+}
+input#inputPrice {
+    width: 30vh;
+}
+.conatiner-product {
+    display: flex;
+    justify-content: space-around;
+}
+.product-list {
+    height: auto;
+    width: 40vh;
+}

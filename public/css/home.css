@@ -9,6 +9,7 @@ body {
 body {
    padding-top: 83px;
 }
+
 img.d-block.w-100 {
   height: 79vh;
 }
@@ -64,7 +65,7 @@ section.repair-area.pt-100.pb-70 {
     text-align: center;
     font-family: arial;
 } 
-  .product-card {
+.product-card {
     margin-right: 79px;
 }
 .price {

@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
     <%- include('layouts/head',); %>
+    <link rel="stylesheet" href="/css/product.css">
+    </head> 
 <body>
     <!--nNav-bar Starting here-->
     <%- include('layouts/nav',); %>
     <!--Carsoule items -->
-    <div class="sliderWrraper" style="height: 625px; width: 100%;">
-        
+    <div class="sliderWrraper" >
+            <div class="row">
+                <div class="col-sm-col-md-auto">
+                    <% if(products.length>0) { %>
+                        <% for (let product of products) { %>
+                            <div class="product-card">
+                                <img class="product-img" src="https://cdn.wccftech.com/wp-content/uploads/2017/09/amazon-event-9270069.jpg" alt="Denim Jeans" style="width:100%">
+                                <div class="recipie-left">
+                                    <h3><%= product.Product_Name %></h3>
+                                    <p class="price"> <%= product.price %></p>
+                                    <p>
+                                        <%=  product.description %>
+                                    </p>
+                                </div> 
+                                <p><button class="buy-btn">Add to Cart</button></p>                              
+                            </div>
+                            <% } %>
+                                <% } else { %>
+                                    <h1>no products</h1>
+                                    <% } %>
+                </div>
+        </div>
     </div>
     <footer class="site-footer" >
         <%- include('layouts/footer',); %>  

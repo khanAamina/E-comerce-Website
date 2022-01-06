@@ -2,21 +2,54 @@
 <html lang="en">
     <head>
     <%- include('layouts/head',); %>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     </head>
 <body>
     <!--nNav-bar Starting here-->
-    <%- include('layouts/dashboard_nav',); %>
+    <%- include('layouts/nav.ejs',); %>
     <!-- welcome alert -->
     <div class="alert alert-info" role="alert">
-        <h6 style="text-align: center ;"> welcome ! <%= Name %> to flana technology  </h6>
+        <h6 style="text-align: center ;"> welcome ! <%= user.Name %> to  technology  </h6>
       </div>
-    <!--Carsoule items -->
-    <div class="sliderWrraper" style="height: 625px; width: 100%;">
-        
-    </div>
+    <div class="conatiner-product">
+        <!--Product Forms-->
+        <div class="Product_form-Wrrapper">
+            <form method='POST' action='/products'>
+                <div class="Names" >
+                    <label for="Product_Name">Product-Name</label>
+                    <input type="text" class="form-control " id="Product-Name" placeholder=" Product Name" name="Product_Name"required>
+                </div>
+                <div class="form-group">
+                    <label for="inputPrice"> Price (in RS) </label>
+                    <input type="number" class="form-control" id="inputPrice" name=price>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">ADD PRODUCT DETAILS</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+                </div>
+                    <button class="btn btn-outline-success my-2 my-sm-0 "  type="submit">Add Product</button>   
+            </form>
+        </div> 
+        <div class="product-list">
+            <h3 class="list-haeding"> Product-List</h3>
+            <% if(products.length>0) { %>
+                <% for (let product of products) { %>
+            <div class="prdct-summary">
+                <h6><%= product.Product_Name %></h6>
+                <button class="btn btn-outline-success my-2 my-sm-0 "  type="submit" >
+                    <i class="material-icons">delete</i>
+                </button> 
+                <button class="btn btn-outline-success my-2 my-sm-0 "  type="submit" >
+                    <i class="material-icons">update</i> 
+                </button> 
+            </div>
+            <% } %>
+            <% } else { %>
+                <h1>no products</h1>
+                <% } %>
+        </div>
+    </div>  
     <footer class="site-footer" >
         <%- include('layouts/footer',); %>  
     </footer>
